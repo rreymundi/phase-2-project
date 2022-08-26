@@ -1,7 +1,10 @@
-function App() {
+import React from "react";
+import Home from "./components/Home";
+
+const App = () => {
   return (
     <div>
-      <h1>phase 2 project</h1>
+      <Home />
     </div>
   );
 }
