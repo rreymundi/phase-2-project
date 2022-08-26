@@ -1,16 +1,22 @@
 {
-    "recipes": [
+    "books": [
         {
             "id": 1,
-            "name": "Lemon Spinach Rissotto",
-            "ingredients": "arborio rice, olive oil, shallots, spinach, lemon, chicken stock, mascarpone",
-            "preparation": "Cook shallots in olive oil for 25 secs, place arborio rice in same pan, put 1/4 cup chicken stock and replenish stock every 4 mins for at least 25 mins, then mix in cheese, spinach, lemon juice and zest"
+            "title": "Substance: Inside New Order",
+            "author": "Peter Hook",
+            "genre": "music"
         },
         {
             "id": 2,
-            "name": "Tiramisu",
-            "ingredients": "4 large egg yolks, 1/2cup granulated sugar, 3/4 cup heavy cream, 1 cup mascarpone, espresso, rum, ladyfingers, bittersweet chocolate",
-            "preparation": "whisk eggs and sugar, in separate bowl whip cream, sugar, and mascarpone, combine espresso and rum in separate bowl"
+            "title": "Comedy Comedy Comedy Drama",
+            "author": "Bob Odenkirk",
+            "genre": "biography"
+        },
+        {
+            "id": 3,
+            "title": "Dune",
+            "author": "Frank Herbert",
+            "genre": "science fiction"
         }
     ]
 }
