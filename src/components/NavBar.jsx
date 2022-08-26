@@ -71,7 +71,7 @@ const NavBar = () => {
                 component="div"
                 sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                 >
-                <Button color='inherit' component={ Link } to='/'>Lunchbox</Button>
+                <Button color='inherit' component={ Link } to='/'>Booksmart</Button>
             </Typography>
             <Search>
                 <SearchIconWrapper>
@@ -82,8 +82,8 @@ const NavBar = () => {
                 inputProps={{ 'aria-label': 'search' }}
                 />
             </Search>
-            <Button color='inherit' component={ Link } to='/recipes/saved'>My Recipes</Button>
-            <Button color='inherit' component={ Link } to='/recipes/new'>Submit</Button>
+            <Button color='inherit' component={ Link } to='/books/saved'>My Library</Button>
+            <Button color='inherit' component={ Link } to='/books/new'>Submit</Button>
             </Toolbar>
       </AppBar>
     </Box>
