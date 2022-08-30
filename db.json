@@ -4,6 +4,7 @@
             "id": 1,
             "title": "Substance: Inside New Order",
             "author": "Peter Hook",
+            "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1470270281l/31345705._SY475_.jpg",
             "genre": "music",
             "blurb": "In this final installment of his internationally bestselling three-part memoir—including The Hacienda and Unknown Pleasures—British rocker Peter Hook focuses on the 1980s New Wave and Dance Punk scene and the rise of one of the most influential bands of the Second British Invasion: New Order."
         },
@@ -11,6 +12,7 @@
             "id": 2,
             "title": "Comedy Comedy Comedy Drama",
             "author": "Bob Odenkirk",
+            "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1639380433l/57851735.jpg",
             "genre": "biography",
             "blurb": "In this hilarious, heartfelt memoir, the star of Mr. Show, Breaking Bad, Better Call Saul, and Nobody opens up about the highs and lows of showbiz, his legendary cult status as a comedy writer, and what it's like to reinvent himself as a no-holds-barred action film ass-kicker at fifty."
         },
@@ -18,6 +20,7 @@
             "id": 3,
             "title": "Dune",
             "author": "Frank Herbert",
+            "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1555447414l/44767458.jpg",
             "genre": "science fiction",
             "blurb": "Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, heir to a noble family tasked with ruling an inhospitable world where the only thing of value is the “spice” melange, a drug capable of extending life and enhancing consciousness. Coveted across the known universe, melange is a prize worth killing for..."
         }

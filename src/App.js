@@ -4,10 +4,11 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import NewBook from "./components/NewBook";
 import SavedBooks from "./components/SavedBooks";
-import { url } from "./Globals";
 
 const App = () => {
-  const [books, setBooks] = useState([]);
+  const url = 'http://localhost:3000/books'
+  const [books, setBooks] = useState([])
+  const [search, setSearch] = useState("")
 
   useEffect(() => {
     fetch(url)
@@ -15,13 +16,11 @@ const App = () => {
     .then((data) => setBooks(data))
   }, []);
 
-  console.log(books)
-
   return (
     <Router>
-      <NavBar />
+      <NavBar search={search} setSearch={setSearch}/>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home search={search} books={books}/>} />
         <Route path='/books/saved' element={<SavedBooks />} />
         <Route path='/books/new' element={<NewBook />} />
       </Routes>
