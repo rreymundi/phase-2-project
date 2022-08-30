@@ -7,7 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
-import { Button, Container } from '@mui/material';
+import { Button} from '@mui/material';
 import { Link } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
@@ -52,11 +52,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const NavBar = () => {
+const NavBar = ({search, setSearch}) => {
+  // console.log(search)
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-          <Container>
           <Toolbar>
             <IconButton
                 size="large"
@@ -80,13 +80,14 @@ const NavBar = () => {
                 </SearchIconWrapper>
                 <StyledInputBase
                 placeholder="Search…"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
                 inputProps={{ 'aria-label': 'search' }}
                 />
             </Search>
             <Button color='inherit' component={ Link } to='/books/saved'>My Library</Button>
             <Button color='inherit' component={ Link } to='/books/new'>Submit</Button>
             </Toolbar>
-          </Container>
       </AppBar>
     </Box>
   );
