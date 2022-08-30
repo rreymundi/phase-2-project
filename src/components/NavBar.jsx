@@ -56,7 +56,8 @@ const NavBar = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-            <Toolbar>
+          <Container>
+          <Toolbar>
             <IconButton
                 size="large"
                 edge="start"
@@ -85,6 +86,7 @@ const NavBar = () => {
             <Button color='inherit' component={ Link } to='/books/saved'>My Library</Button>
             <Button color='inherit' component={ Link } to='/books/new'>Submit</Button>
             </Toolbar>
+          </Container>
       </AppBar>
     </Box>
   );

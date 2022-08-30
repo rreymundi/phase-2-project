@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState, useEffect} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import NewBook from "./components/NewBook";
 import SavedBooks from "./components/SavedBooks";
+import { url } from "./Globals";
 
 const App = () => {
+  const [books, setBooks] = useState([]);
+
+  useEffect(() => {
+    fetch(url)
+    .then((r) => r.json())
+    .then((data) => setBooks(data))
+  }, []);
+
+  console.log(books)
+
   return (
     <Router>
       <NavBar />
