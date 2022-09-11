@@ -52,7 +52,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const NavBar = ({search, setSearch}) => {
+const NavBar = ({ search, setSearch }) => {
   // console.log(search)
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -72,7 +72,7 @@ const NavBar = ({search, setSearch}) => {
                 component="div"
                 sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                 >
-                <Button color='inherit' component={ Link } to='/'>Booksmart</Button>
+                <Button color='inherit' component={ Link } to='/'>Bookmarked</Button>
             </Typography>
             <Search>
                 <SearchIconWrapper>
@@ -86,7 +86,7 @@ const NavBar = ({search, setSearch}) => {
                 />
             </Search>
             <Button color='inherit' component={ Link } to='/books/saved'>My Library</Button>
-            <Button color='inherit' component={ Link } to='/books/new'>Submit</Button>
+            <Button color='inherit' component={ Link } to='/books/new'>Add</Button>
             </Toolbar>
       </AppBar>
     </Box>

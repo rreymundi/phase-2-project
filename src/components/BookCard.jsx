@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -6,18 +6,23 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-const BookCard = ({book, onDeleteBook}) => {
+const BookCard = ({ book, onDeleteBook, onSavedBook, onUnsaveBook }) => {
+    const [isSaved, setSaved] = useState(false)
 
-    function handleDeleteClick(){
+    const handleDeleteClick = () => {
         fetch(`http://localhost:3000/books/${book.id}`, {
             method: "DELETE",
-        });
-
+        })
         onDeleteBook(book.id);
-        }
+    };
+
+    const handleSaveClick = () => {
+      setSaved((isSaved) => !isSaved)
+      isSaved ? onUnsaveBook(book.id) : onSavedBook(book)
+    }
 
   return (
-    <Card key={book.id} sx={{ maxWidth: 150, margin: 2, position: 'relative'}} >
+    <Card className="card" key={book.id} sx={{ maxWidth: 150, margin: 2, position: 'relative'}} >
       <CardMedia
         component="img"
         height="225"
@@ -33,9 +38,8 @@ const BookCard = ({book, onDeleteBook}) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Save</Button>
-        <Button size="small">Learn More</Button>
-        <Button size="small" onClick={handleDeleteClick}>🗑</Button>
+        <Button size="small" onClick={handleSaveClick}>{isSaved ? "Unsave" : "Save"}</Button>
+        <Button size="small" onClick={handleDeleteClick}>Delete</Button>
       </CardActions>
     </Card>
   );

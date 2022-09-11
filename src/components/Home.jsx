@@ -1,12 +1,15 @@
 import React from 'react';
 import BookList from './BookList';
 
-const Home = ({books, search}) => {
+const Home = ({ books, search, onDeleteBook, onSavedBook, onUnsaveBook }) => {
 
   return (
     <>
-    <h1>Welcome to Booksmart!</h1>
-    {search === "" ? "Search for a book to begin your reading journey." : <BookList books={books} search={search} />}
+    <div className='content'>
+      <h1>Welcome to Bookmarked!</h1>
+      <p>An online repository of all your favorite books</p>
+    </div>
+    <BookList books={books} search={search} onDeleteBook={onDeleteBook} onSavedBook={onSavedBook} onUnsaveBook={onUnsaveBook}/>
     </>
   )
 }
