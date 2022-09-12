@@ -13,7 +13,8 @@ const SavedBookCard = ({ book, onUnsaveBook }) => {
     }
 
   return (
-    <Card key={book.id} className="card" sx={{ maxWidth: 150, margin: 2, position: 'relative'}} >
+    <div className='card'>
+      <Card key={book.id} sx={{ maxWidth: 150, margin: 2, position: 'relative'}} >
       <CardMedia
         component="img"
         height="225"
@@ -32,6 +33,7 @@ const SavedBookCard = ({ book, onUnsaveBook }) => {
         <Button size="small" onClick={handleUnsaveClick}>Unsave</Button>
       </CardActions>
     </Card>
+    </div>
   );
 }
 

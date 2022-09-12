@@ -9,7 +9,7 @@ const NewBook = ({onAddBook}) => {
     author: "",
     image: "",
     genre: "",
-    blurb: ""
+    blurb: "",
   })
 
   const handleChange = (e) => {
@@ -26,7 +26,8 @@ const NewBook = ({onAddBook}) => {
       author: formData.author,
       image: formData.image,
       genre: formData.genre,
-      blurb: formData.blurb
+      blurb: formData.blurb,
+      saved: false
       }
     fetch("http://localhost:3000/books", {
       method: "POST",

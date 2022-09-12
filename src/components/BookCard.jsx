@@ -18,15 +18,17 @@ const BookCard = ({ book, onDeleteBook, onSavedBook, onUnsaveBook }) => {
 
     const handleSaveClick = () => {
       setSaved((isSaved) => !isSaved)
-      isSaved ? onUnsaveBook(book.id) : onSavedBook(book)
+      onUnsaveBook(book.id)
+      onSavedBook(book)
     }
 
   return (
-    <Card className="card" key={book.id} sx={{ maxWidth: 150, margin: 2, position: 'relative'}} >
+    <div className='card'>
+      <Card key={book.id} sx={{ maxWidth: 150, margin: 2 }} >
       <CardMedia
         component="img"
         height="225"
-        image={book.image}
+        image={book.image} 
         alt={book.title}
       />
       <CardContent>
@@ -42,6 +44,7 @@ const BookCard = ({ book, onDeleteBook, onSavedBook, onUnsaveBook }) => {
         <Button size="small" onClick={handleDeleteClick}>Delete</Button>
       </CardActions>
     </Card>
+    </div>
   );
 }
 

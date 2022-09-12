@@ -1,10 +1,9 @@
 import React from "react";
-import SavedBookCard from './SavedBookCard';
+import BookCard from "./BookCard";
 
-const SavedBookList = ({ books, search, onUnsaveBook }) => {
+const SavedBookList = ({ books, onUnsaveBook, isSaved, setSaved }) => {
 
-    // const booksToDisplay = books.filter((book) => book.name.toLowerCase().includes(search.toLowerCase()))
-    const booksToDisplay = books.map((book) => <SavedBookCard key={book.id} book={book} onUnsaveBook={onUnsaveBook} />)
+    const booksToDisplay = books.map((book) => <BookCard key={book.id} book={book} onUnsaveBook={onUnsaveBook} isSaved={isSaved} setSaved={setSaved} />)
 
     return (
         <div style={{ display: "flex", flexWrap: "wrap" }}>{booksToDisplay}</div>
