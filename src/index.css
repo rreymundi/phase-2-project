@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .card {
   display: flex;
   position: relative;
@@ -24,6 +28,7 @@ code {
 
 .card:hover {
   transform: translateX(-4px) translateY(-4px);
+  cursor: pointer;
   }
 
 .content {

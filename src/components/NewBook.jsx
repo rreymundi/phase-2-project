@@ -50,11 +50,11 @@ const NewBook = ({onAddBook}) => {
             autoComplete="off"
             onSubmit={handleSubmit}
           >
-            <TextField id="title" name="title" variant="standard" placeholder="Title" value={formData.title} onChange={handleChange} />
-            <TextField id="author" name="author" variant="standard" placeholder="Author" value={formData.author} onChange={handleChange} />
-            <TextField id="image" name="image" variant="standard" placeholder="Image URL" value={formData.image} onChange={handleChange} type="url" />
-            <TextField id="genre" name="genre" variant="standard" placeholder="Genre" value={formData.genre} onChange={handleChange} />
-            <TextField id="blurb" name="blurb" variant="standard" placeholder="Blurb" value={formData.blurb} onChange={handleChange} />
+            <TextField required id="title" name="title" variant="standard" placeholder="Title" value={formData.title} onChange={handleChange} />
+            <TextField required id="author" name="author" variant="standard" placeholder="Author" value={formData.author} onChange={handleChange} />
+            <TextField required id="image" name="image" variant="standard" placeholder="Image URL" value={formData.image} onChange={handleChange} type="url" />
+            <TextField required id="genre" name="genre" variant="standard" placeholder="Genre" value={formData.genre} onChange={handleChange} />
+            <TextField required id="blurb" name="blurb" variant="standard" placeholder="Blurb" value={formData.blurb} onChange={handleChange} />
             <Button variant="contained" color="primary" type="submit">Submit</Button>
           </Box>
     </div>
