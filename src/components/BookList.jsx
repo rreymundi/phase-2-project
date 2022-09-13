@@ -1,3 +1,4 @@
+import { Container } from "@mui/system";
 import React from "react";
 import BookCard from './BookCard';
 
@@ -9,7 +10,9 @@ const BookList = ({ books, search, onDeleteBook, onSavedBook, onUnsaveBook }) =>
     const myFilteredBooks = filteredBooks.map((book) => <BookCard key={book.id} book={book} onDeleteBook={onDeleteBook} onSavedBook={onSavedBook} onUnsaveBook={onUnsaveBook} />)
 
     return (
-        <div style={{ display: "flex", flexWrap: "wrap" }}>{search === "" ? unfilteredBooks : myFilteredBooks}</div>
+        <Container sx={{ display: "flex", flexWrap: "wrap", justifyContent: "left" }}>
+            {search === "" ? unfilteredBooks : myFilteredBooks}
+        </Container>
     )
 }
 

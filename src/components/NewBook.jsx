@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
+import { Container } from '@mui/system';
 
 const NewBook = ({onAddBook}) => {
   const [formData, setFormData] = useState({
@@ -41,8 +42,8 @@ const NewBook = ({onAddBook}) => {
   }
 
   return (
-    <div className='content'>
-        <h1>Add a book</h1>
+    <Container sx={{justifyContent: "center"}}>
+      <h1>Add a book</h1>
           <Box
             component="form"
             sx={{'& > :not(style)': { m: 1, width: '25ch' }}}
@@ -57,7 +58,7 @@ const NewBook = ({onAddBook}) => {
             <TextField required id="blurb" name="blurb" variant="standard" placeholder="Blurb" value={formData.blurb} onChange={handleChange} />
             <Button variant="contained" color="primary" type="submit">Submit</Button>
           </Box>
-    </div>
+    </Container>
   )
 }
 

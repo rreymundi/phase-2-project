@@ -1,15 +1,14 @@
 import React from 'react';
 import SavedBookList from './SavedBookList';
+import { Container } from "@mui/system";
 
 const SavedBooks = ({ savedBooks, onUnsaveBook, isSaved, setSaved }) => {
 
   return (
-    <>
-        <div className='content'>
-          <h1>My Library</h1>
-          <p>{savedBooks.length === 0 ? "Start adding books to your library!" : <SavedBookList books={savedBooks} onUnsaveBook={onUnsaveBook} isSaved={isSaved} setSaved={setSaved}/>}</p>
-          </div>
-    </>
+    <Container>
+      <h1>My Library</h1>
+      <div>{savedBooks.length === 0 ? "Start adding books to your library!" : <SavedBookList books={savedBooks} onUnsaveBook={onUnsaveBook} isSaved={isSaved} setSaved={setSaved}/>}</div>
+    </Container>
   )
 }
 
