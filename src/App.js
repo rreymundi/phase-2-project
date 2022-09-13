@@ -11,7 +11,6 @@ const App = () => {
   const [books, setBooks] = useState([])
   const [search, setSearch] = useState("")
   const [savedBooks, setSavedBooks] = useState([])
-  const [isSaved, setSaved] = useState(false)
 
   useEffect(() => {
     fetch(url)
@@ -31,19 +30,21 @@ const App = () => {
   const handleBookSave = (savedBook) => {
     if (!savedBooks.includes(savedBook))
     setSavedBooks([...savedBooks, savedBook])
+    savedBook.saved = !savedBook.saved
   }
 
   const handleUnsaveBook = (id) => {
     const updatedSavedBooks = savedBooks.filter((book) => book.id !== id)
     setSavedBooks(updatedSavedBooks)
+    books.map((book) => book.id === id ? book.saved = false : book)
   }
 
   return (
     <Router>
       <NavBar search={search} setSearch={setSearch}/>
       <Routes>
-        <Route path='/' element={<Home search={search} books={books} onDeleteBook={handleDeleteBook} onSavedBook={handleBookSave} onUnsaveBook={handleUnsaveBook} isSaved={isSaved} setSaved={setSaved} />} />
-        <Route path='/books/saved' element={<SavedBooks savedBooks={savedBooks} onUnsaveBook={handleUnsaveBook} isSaved={isSaved} setSaved={setSaved} />} />
+        <Route path='/' element={<Home search={search} books={books} onDeleteBook={handleDeleteBook} onSavedBook={handleBookSave} onUnsaveBook={handleUnsaveBook} />} />
+        <Route path='/books/saved' element={<SavedBooks savedBooks={savedBooks} onUnsaveBook={handleUnsaveBook} />} />
         <Route path='/books/new' element={<NewBook onAddBook={handleBookAdd} />} />
       </Routes>
     </Router>
