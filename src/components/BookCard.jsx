@@ -26,7 +26,7 @@ const BookCard = ({ book, onDeleteBook, onSavedBook, onUnsaveBook }) => {
 
   return (
     <div className='card'>
-      <Card key={book.id} sx={{ maxWidth: 150, margin: 2 }} >
+      <Card key={book.id} sx={{ width: 150, height: 400, margin: 2 }} >
       <CardMedia
         component="img"
         height="225"
@@ -41,7 +41,7 @@ const BookCard = ({ book, onDeleteBook, onSavedBook, onUnsaveBook }) => {
           by {book.author}
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions className='buttons'>
         <Button size="small" onClick={saved ? handleUnsaveClick : handleSaveClick}>{saved ? "Unsave" : "Save"}</Button>
         <Button size="small" onClick={handleDeleteClick}>Delete</Button>
       </CardActions>

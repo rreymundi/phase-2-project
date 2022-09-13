@@ -7,7 +7,7 @@ const SavedBooks = ({ savedBooks, onUnsaveBook, isSaved, setSaved }) => {
   return (
     <Container>
       <h1>My Library</h1>
-      <div>{savedBooks.length === 0 ? "Start adding books to your library!" : <SavedBookList books={savedBooks} onUnsaveBook={onUnsaveBook} isSaved={isSaved} setSaved={setSaved}/>}</div>
+      <div>{savedBooks.length === 0 ? <p>Start adding books to your personal library!</p> : <SavedBookList books={savedBooks} onUnsaveBook={onUnsaveBook} isSaved={isSaved} setSaved={setSaved}/>}</div>
     </Container>
   )
 }

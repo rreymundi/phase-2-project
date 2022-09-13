@@ -2,6 +2,7 @@ import React, { useState, useEffect} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
+import Discover from "./components/Discover";
 import NewBook from "./components/NewBook";
 import SavedBooks from "./components/SavedBooks";
 import "./index.css";
@@ -30,7 +31,7 @@ const App = () => {
   const handleBookSave = (savedBook) => {
     if (!savedBooks.includes(savedBook))
     setSavedBooks([...savedBooks, savedBook])
-    savedBook.saved = !savedBook.saved
+    savedBook.saved = true
   }
 
   const handleUnsaveBook = (id) => {
@@ -43,7 +44,8 @@ const App = () => {
     <Router>
       <NavBar search={search} setSearch={setSearch}/>
       <Routes>
-        <Route path='/' element={<Home search={search} books={books} onDeleteBook={handleDeleteBook} onSavedBook={handleBookSave} onUnsaveBook={handleUnsaveBook} />} />
+        <Route path='/discover' element={<Discover search={search} books={books} onDeleteBook={handleDeleteBook} onSavedBook={handleBookSave} onUnsaveBook={handleUnsaveBook} />} />
+        <Route path='/' element={<Home />} />
         <Route path='/books/saved' element={<SavedBooks savedBooks={savedBooks} onUnsaveBook={handleUnsaveBook} />} />
         <Route path='/books/new' element={<NewBook onAddBook={handleBookAdd} />} />
       </Routes>

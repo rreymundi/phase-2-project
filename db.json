@@ -44,6 +44,24 @@
       "blurb": "An astonishing technique for recovering and cloning dinosaur DNA has been discovered. Now humankind’s most thrilling fantasies have come true. Creatures extinct for eons roam Jurassic Park with their awesome presence and profound mystery, and all the world can visit them—for a price.  Until something goes wrong. . . .",
       "id": 6,
       "saved": false
+    },
+    {
+      "title": "Lovecraft Country",
+      "author": "Matt Ruff",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1426040983l/25109947.jpg",
+      "genre": "horror",
+      "blurb": "The critically acclaimed cult novelist makes visceral the terrors of life in Jim Crow America and its lingering effects in this brilliant and wondrous work of the imagination that melds historical fiction, pulp noir, and Lovecraftian horror and fantasy.",
+      "saved": false,
+      "id": 7
+    },
+    {
+      "title": "The Twilight World",
+      "author": "Werner Herzog",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1638919129l/59576066._SY475_.jpg",
+      "genre": "fiction",
+      "blurb": "The great filmmaker Werner Herzog, in his first novel, tells the incredible story of Hiroo Onoda, a Japanese soldier who defended a small island in the Philippines for twenty-nine years after the end of World War II",
+      "saved": false,
+      "id": 8
     }
   ]
 }

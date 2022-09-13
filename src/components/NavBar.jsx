@@ -55,17 +55,25 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const NavBar = ({ search, setSearch }) => {
   // console.log(search)
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, alignItems:'center' }}>
       <AppBar position="static">
           <Toolbar>
-            <IconButton
+            {/* <IconButton
                 size="large"
                 edge="start"
                 color="inherit"
                 aria-label="open drawer"
                 sx={{ mr: 2 }}
                 >
-            </IconButton>
+            </IconButton> */}
+            <Typography
+                variant="h6"
+                noWrap
+                component="div"
+                sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                >
+                <Button color='inherit' component={ Link } to='/discover'>Discover</Button>
+            </Typography>
             <Typography
                 variant="h6"
                 noWrap
@@ -86,7 +94,7 @@ const NavBar = ({ search, setSearch }) => {
                 />
             </Search>
             <Button color='inherit' component={ Link } to='/books/saved'>My Library</Button>
-            <Button color='inherit' component={ Link } to='/books/new'>Add</Button>
+            <Button color='inherit' component={ Link } to='/books/new'>Add a book</Button>
             </Toolbar>
       </AppBar>
     </Box>
