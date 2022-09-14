@@ -28,6 +28,7 @@ const BookCard = ({ book, onDeleteBook, onSavedBook, onUnsaveBook }) => {
     <div className='card'>
       <Card key={book.id} sx={{ width: 150, height: 400, margin: 2 }} >
       <CardMedia
+        className='img'
         component="img"
         height="225"
         image={book.image} 

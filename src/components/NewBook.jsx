@@ -47,15 +47,14 @@ const NewBook = ({onAddBook}) => {
           <Box
             component="form"
             sx={{'& > :not(style)': { m: 1, width: '25ch' }}}
-            noValidate
             autoComplete="off"
             onSubmit={handleSubmit}
           >
-            <TextField id="title" name="title" variant="standard" placeholder="Title" value={formData.title} onChange={handleChange} />
-            <TextField id="author" name="author" variant="standard" placeholder="Author" value={formData.author} onChange={handleChange} />
-            <TextField id="image" name="image" variant="standard" placeholder="Image URL" value={formData.image} onChange={handleChange} />
-            <TextField id="genre" name="genre" variant="standard" placeholder="Genre" value={formData.genre} onChange={handleChange} />
-            <TextField id="blurb" name="blurb" variant="standard" placeholder="Blurb" value={formData.blurb} onChange={handleChange} />
+            <TextField required={ true } id="title" name="title" variant="standard" placeholder="Title" value={formData.title} onChange={handleChange} />
+            <TextField required={ true } id="author" name="author" variant="standard" placeholder="Author" value={formData.author} onChange={handleChange} />
+            <TextField required={ true}  id="image" name="image" variant="standard" placeholder="Image URL" value={formData.image} onChange={handleChange} type='url' />
+            <TextField required={ true } id="genre" name="genre" variant="standard" placeholder="Genre" value={formData.genre} onChange={handleChange} />
+            <TextField required={ true } id="blurb" name="blurb" variant="standard" placeholder="Blurb" value={formData.blurb} onChange={handleChange} multiline maxRows={8} />
             <Button variant="contained" color="primary" type="submit">Submit</Button>
           </Box>
     </Container>

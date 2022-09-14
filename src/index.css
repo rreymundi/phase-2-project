@@ -28,8 +28,12 @@ button:hover {
 
 .card:hover {
   transform: translateX(-4px) translateY(-4px);
-  cursor: pointer;
+  /* cursor: pointer; */
   }
+
+/* .img {
+  cursor: pointer;
+} */
 
 .content {
   margin: 1em;
