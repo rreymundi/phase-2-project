@@ -17,7 +17,11 @@ Bookmarked lets you keep track of your favorite books. Use the nav bar to search
 
 ## App Functionality
 
+
+
 ## App demo
+
+
 
 **Thanks for reading!**
 
