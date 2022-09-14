@@ -44,8 +44,8 @@ const App = () => {
     <Router>
       <NavBar search={search} setSearch={setSearch}/>
       <Routes>
-        <Route path='/discover' element={<Discover search={search} books={books} onDeleteBook={handleDeleteBook} onSavedBook={handleBookSave} onUnsaveBook={handleUnsaveBook} />} />
         <Route path='/' element={<Home />} />
+        <Route path='/discover' element={<Discover search={search} books={books} onDeleteBook={handleDeleteBook} onSavedBook={handleBookSave} onUnsaveBook={handleUnsaveBook} />} />
         <Route path='/books/saved' element={<SavedBooks savedBooks={savedBooks} onUnsaveBook={handleUnsaveBook} />} />
         <Route path='/books/new' element={<NewBook onAddBook={handleBookAdd} />} />
       </Routes>
