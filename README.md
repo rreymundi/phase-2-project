@@ -17,20 +17,26 @@ Bookmarked lets you keep track of your favorite books. Use the nav bar to search
 
 ## App Functionality
 
-The component hierarchy is as follows:
+Bookmarked is an MVP version of the app. The REACT component hierarchy is as follows:
 
 App
-|__NavBar
-|__Home
-|__Discover
-|   |__BookList
-|       |__BookCard
-|__SavedBooks
-|   |__SavedBookList
-|       |__BookCard
-|__NewBook
+- NavBar
+- Home
+- Discover
+    - BookList
+        - BookCard
+- SavedBooks
+    - SavedBookList
+        - BookCard
+- NewBook
 
+The backend was set up using json-server to create a RESTful API. The "App" component is making use of the useEffect and useState hooks to GET data from the db and set the "books" state. The useEffect dependency array is set to run only once upon render. 
 
+The "App" will first load the "NavBar" and "Home" components. The "NavBar" is set to handle the routes for each component housed within it and contains a search bar. The "App" component makes use of a "search" state, which is determined by the value of the "NavBar" search bar input–a controlled input. "Home" simply displays a welcome message.
+
+Clicking the "Discover" link within the NavBar sets the route to "/discover" and renders the "Discover" component. This component houses a "BookList" component which is where the search filter logic is handled for that component. The "unfilteredBooks" variable renders a "BookCard" component for each book in my "books" array, while the "myFilteredBooks" variable renders a "BookCard" for each book in an array filtered based on "search". Both variables pass down the book data as a prop. The end result is that if "search" state is an empty string, the "BookList" component will render "unfilteredBooks", otherwise it will render "myFilteredBooks".
+
+The "BookCard" component takes the book data which was passed down as a prop and renders the book image, title, and author. It also renders two buttons: one for "Save" and another for "Delete". The "Save"
 
 
 ## App demo
