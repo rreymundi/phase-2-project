@@ -72,7 +72,7 @@ const NavBar = ({ search, setSearch }) => {
                 component="div"
                 sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                 >
-                <Button color='inherit' component={ Link } to='/discover'>Discover</Button>
+                <Button color='inherit' component={ Link } to='/books/discover'>Discover</Button>
             </Typography>
             <Typography
                 variant="h6"
