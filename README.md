@@ -44,7 +44,7 @@ Lastly, clicking the "Add a Book" link in the "NavBar" sets the route to "/books
 
 ## App demo
 
-Click [this](https://drive.google.com/file/d/1828o4F5dIAGuM1kJhhFoCF0AJgujOR0X/view?usp=sharing) link to access a demo of the app!
+Click [this](https://drive.google.com/file/d/1KpXsDKvWy9buoVtyBr_IfsjZxQQ2d6RO/view?usp=sharing) link to access a demo of the app!
 
 **Thanks for reading!**
 
