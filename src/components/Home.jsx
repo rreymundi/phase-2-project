@@ -1,7 +1,7 @@
 import { Container } from "@mui/system";
 import React from 'react';
 
-const Home = ({ books, search, onDeleteBook, onSavedBook, onUnsaveBook }) => {
+const Home = () => {
 
   return (
     <Container sx={{justifyContent: "center"}}>

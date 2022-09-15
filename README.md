@@ -33,9 +33,6 @@ App
 
 
 
-
-
-
 ## App demo
 
 
