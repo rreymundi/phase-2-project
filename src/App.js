@@ -11,6 +11,7 @@ const App = () => {
   const url = 'http://localhost:3000/books'
   const [books, setBooks] = useState([])
   const [search, setSearch] = useState("")
+  const [savedStatus, setSavedStatus] = useState(false)
 
   useEffect(() => {
     fetch(url)
@@ -27,12 +28,13 @@ const App = () => {
     setBooks([...books, newBook])
   }
 
-  const handleBookSave = (book) => {
-    book.saved = true
+  const handleBookSave = () => {
+    setSavedStatus((savedStatus) => !savedStatus)
+
   }
 
-  const handleUnsaveBook = (id) => {
-    books.map((book) => book.id === id ? book.saved = false : book)
+  const handleUnsaveBook = () => {
+    setSavedStatus((savedStatus) => !savedStatus)
   }
 
   return (
@@ -41,7 +43,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/discover' element={<Discover search={search} books={books} onDeleteBook={handleDeleteBook} onSavedBook={handleBookSave} onUnsaveBook={handleUnsaveBook} />} />
-        <Route path='/books/saved' element={<SavedBooks books={books} onUnsaveBook={handleUnsaveBook} onDeleteBook={handleDeleteBook} search={search}/>} />
+        <Route path='/books/saved' element={<SavedBooks books={books} onUnsaveBook={handleUnsaveBook} onDeleteBook={handleDeleteBook} search={search} />} />
         <Route path='/books/new' element={<NewBook onAddBook={handleBookAdd} />} />
       </Routes>
     </Router>

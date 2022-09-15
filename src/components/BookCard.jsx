@@ -8,7 +8,6 @@ import Typography from '@mui/material/Typography';
 
 const BookCard = ({ book, onDeleteBook, onSavedBook, onUnsaveBook }) => {
     let saved = book.saved
-    const [savedStatus, setSavedStatus] = useState(false)
 
     const handleDeleteClick = () => {
         fetch(`http://localhost:3000/books/${book.id}`, {
@@ -18,21 +17,16 @@ const BookCard = ({ book, onDeleteBook, onSavedBook, onUnsaveBook }) => {
     };
 
     const handleSaveClick = () => {
-      setSavedStatus(true)
+      book.saved = true
       onSavedBook(book)
       console.log(book)
     }
 
     const handleUnsaveClick = () => {
-      setSavedStatus(false)
+      book.saved = false
       onUnsaveBook(book.id)
       console.log(book)
     }
-
-    // const handleUnsaveClick = () => {
-    //   onUnsaveBook(book.id)
-    //   console.log(book)
-    // }
 
   return (
     <div className='card'>
