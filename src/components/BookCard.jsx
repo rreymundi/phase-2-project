@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 const BookCard = ({ book, onDeleteBook, onSavedBook, onUnsaveBook }) => {
-    const saved = book.saved
+    let saved = book.saved
 
     const handleDeleteClick = () => {
         fetch(`http://localhost:3000/books/${book.id}`, {
@@ -17,11 +17,15 @@ const BookCard = ({ book, onDeleteBook, onSavedBook, onUnsaveBook }) => {
     };
 
     const handleSaveClick = () => {
+      book.saved = true
       onSavedBook(book)
+      console.log(book)
     }
 
     const handleUnsaveClick = () => {
+      book.saved = false
       onUnsaveBook(book.id)
+      console.log(book)
     }
 
   return (

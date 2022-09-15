@@ -17,6 +17,20 @@ Bookmarked lets you keep track of your favorite books. Use the nav bar to search
 
 ## App Functionality
 
+The component hierarchy is as follows:
+
+App
+|__NavBar
+|__Home
+|__Discover
+|   |__BookList
+|       |__BookCard
+|__SavedBooks
+|   |__SavedBookList
+|       |__BookCard
+|__NewBook
+
+
 
 
 ## App demo
