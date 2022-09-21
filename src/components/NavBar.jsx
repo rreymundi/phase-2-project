@@ -58,14 +58,6 @@ const NavBar = ({ search, setSearch }) => {
     <Box sx={{ flexGrow: 1, alignItems:'center' }}>
       <AppBar position="static">
           <Toolbar>
-            {/* <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="open drawer"
-                sx={{ mr: 2 }}
-                >
-            </IconButton> */}
             <Typography
                 variant="h6"
                 noWrap
